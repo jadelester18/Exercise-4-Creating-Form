@@ -1,0 +1,23 @@
+<!-- <p>book-list works!</p> -->
+
+<!-- getting direct from parent -->
+<!-- <div *ngFor="let data of books">
+  id: {{ data.id }} <br />
+  name: {{ data.name }} <br />
+  authors: {{ data.authors }} <br />
+  isbn: {{ data.isbn }} <br /><br />
+</div> -->
+
+<!-- passing index 0 to child component -->
+<!-- <app-book-item [booksItem]="books[0]"></app-book-item> -->
+
+<app-command-bar></app-command-bar>
+<br />
+<br />
+<div *ngFor="let data of books">
+  <app-book-item
+    (editParam)="executeAction($event)"
+    (deleteParam)="executeAction($event)"
+    [booksItem]="data"
+  ></app-book-item>
+</div>

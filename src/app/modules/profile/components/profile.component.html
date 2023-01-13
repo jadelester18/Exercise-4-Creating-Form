@@ -1,0 +1,24 @@
+<!-- <p>profile works!</p> -->
+<div>
+  <form [formGroup]="profileForm" class="container">
+    <label for="email">Email:</label>
+    <input
+      formControlName="email"
+      type="email"
+      id="email"
+      name="email"
+      required
+    />
+    <br />
+    <label for="name">Name:</label>
+    <input formControlName="name" type="text" id="name" name="name" required />
+    <br />
+    <label for="bio">Bio:</label>
+    <textarea formControlName="bio" id="bio" name="bio" required></textarea>
+    <br />
+    <label for="active">Active:</label>
+    <input formControlName="active" type="checkbox" id="active" name="active" />
+    <br />
+    <input type="submit" value="Submit" />
+  </form>
+</div>

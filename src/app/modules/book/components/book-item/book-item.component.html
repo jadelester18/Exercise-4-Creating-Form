@@ -1,0 +1,18 @@
+<!-- <p>book-item works!</p> -->
+
+<div>
+  From Book Item <br />
+  id: {{ booksItem?.id }} <br />
+  name: {{ booksItem?.name }} <br />
+  authors: {{ booksItem?.authors }} <br />
+  isbn: {{ booksItem?.isbn }} <br />
+  <a
+    routerLink="form"
+    routerLinkActive="router-link-active"
+    class="btn btn-primary"
+    (click)="edit()"
+    >edit</a
+  >
+  <button (click)="delete()">delete</button> <br />
+  <br />
+</div>

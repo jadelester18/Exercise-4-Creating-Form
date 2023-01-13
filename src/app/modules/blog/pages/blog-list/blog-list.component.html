@@ -1,0 +1,11 @@
+<!-- <p>blog-list works!</p> -->
+<app-command-bar></app-command-bar>
+<br />
+<br />
+<div *ngFor="let data of blogs">
+  <app-blog-item
+    (editParam)="executeAction($event)"
+    (deleteParam)="executeAction($event)"
+    [blogsItem]="data"
+  ></app-blog-item>
+</div>
